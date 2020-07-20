@@ -1,0 +1,360 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+@import 'pages/reset';
+@import 'base/base';
+@import 'pages/portfolio';
+@import 'pages/fonts';
+@import 'base/colors';
+@import 'pages/screensize';
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+//Variables
+$header-height: 4rem;
+
+body {
+	background: #09141e;
+}
+
+.header{
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+//Navigation
+.nav{
+    height: $header-height;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    img{
+    	margin-right: 80px;
+    }
+
+    &__menu{
+        @media screen and(max-width: 968px){
+            position: fixed;
+            top: $header-height;
+            left: -100%; //keep the nav off the screen waiting for toggle
+            padding: 1.5rem;
+            background-color: #9596A2
+;
+            width: 60%;
+            transition: .33s;
+        }
+    }
+    .name{
+        color: #111;
+        font-size: 1.5rem;
+        padding: .3rem;
+        text-decoration: none
+    }
+    .category{
+        margin-bottom: 2rem;
+    }
+}
+
+.show{
+    left: 0; //bring the nav back from the left using js 
+}
+
+@media screen and(min-width: 968px){
+    body{
+        margin: 0;
+    }
+    .nav{
+        height: $header-height + 1rem;
+
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category{
+            margin-right: 4rem;
+            font-size: .5rem;
+            margin-bottom: 0;
+        }
+
+        &__toggle{
+            display: none; //hide menu toggle 
+        }
+    }
+  }
+
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 7vw;
+	width: 100vw;
+	padding: 15px;
+	text-align: center;
+	z-index: 2;
+	margin-top: 80px;
+	background: linear-gradient(
+		60deg,
+		hsl(0, 75%, 50%) 10%,
+		hsl(20, 75%, 50%) 10%,
+		hsl(20, 75%, 50%) 25%,
+		hsl(50, 75%, 50%) 25%,
+		hsl(50, 75%, 50%) 40%,
+		hsl(130, 75%, 50%) 40%,
+		hsl(130, 75%, 50%) 55%,
+		hsl(200, 75%, 50%) 55%,
+		hsl(200, 75%, 50%) 70%,
+		hsl(260, 75%, 50%) 70%,
+		hsl(260, 75%, 50%) 85%,
+		hsl(0, 75%, 50%) 85%
+	);
+
+	color: #fff;
+   	animation: 10s BeProud linear infinite,
+   	3s Always ease alternate infinite;
+}
+
+/* 2. Content ================================= */
+
+section.information{
+
+	width: 100%;
+	max-width: 70%;
+	margin: 100px auto;
+
+	.info-section{
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		line-height: 1.6;
+		text-align: center;
+	}
+	
+}
+
+
+section#portfolio.layout.layout-portfolio{
+	// padding: 90px 0;
+
+    font-family: sans-serif;
+    width: 100%;
+    max-width: 80%;
+    margin: -20px auto;
+    padding: 50px 20px;
+    border: 3px dotted white;
+ 	// div[style] {
+ 	// background: !important;
+	// }
+
+	.container{
+		width: 95%;
+		position: relative; 
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+
+	.text-container{
+
+		height: 100%;
+		position: relative;
+		text-align: center;
+		color: #fff;
+
+		h4{
+	font-family: 'Bowlby One SC', cursive;
+			font-size: 1.5rem;
+			position: absolute;
+			z-index: 1;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -70%);
+		}
+
+		span{
+			font-family: 'Fredoka One', cursive;
+			font-size: 1.2rem;
+			margin-top: 50px;
+			position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+
+		    @media(min-width: 992px){
+						display: none;
+
+					}
+		}
+}
+
+	.portfolio-grid{
+		padding: 25px 0;
+		position: relative; //parent
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		a{
+			text-decoration: none;
+
+		}
+
+		.single-project{ //text in the center and add padding it'll grow? - Percentages are better for widths and not heights 
+			width: 100%; //100% width of its parent container
+			text-align: center;
+			margin: 15px 0;
+			position: relative;
+			padding: 0 15px;
+			height: 275px;
+			// transition: all 0.2s ease-out;
+
+			.inner{
+
+				height: 100%;
+				position: relative;
+				border-radius: 50%;
+
+			.img-overlay{
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: rgba(0,0,0,0.3);
+					border-radius: 50%;
+
+					@media(min-width: 992px){
+						background: rgba(0,0,0,0.5);
+
+						&:hover{
+							background: rgba(0,0,0,0.2);
+						}
+					}
+				}
+			}
+			
+
+			@media (min-width: 768px){
+				width: 50%;
+				height: 250px;
+			}
+			@media (min-width: 992px){
+				width: 33.3%;
+				height: 200px;
+			}
+			@media (min-width: 1200px){
+				width: 25%;
+				height: 200px;
+			}
+
+			&:focus, 
+			&:active{
+				outline: 0px;
+			}
+
+			&:hover{
+
+				// .inner .img-overlay{
+				// 	//background: rgba(0,0,0,0.3);
+				// }
+
+				.text-container{
+					span.project-subtitle{
+						display: block;
+						animation: fade-in .8s ease-out ;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes fade-in {
+	 0%   { color: #EF8E20; opacity: 0; }
+	 // 50%   { color: #EF8E20; opacity: 0.7; }
+	  100% { color: #fff; opacity: 1; }
+}
+
+@keyframes BeProud {
+	100% { background-position: 100vw 0px; }
+}
+
+@keyframes Always {
+	100% { transform: scale(1.1);}
+}
+
+footer {
+	background-color: #fff;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	line-height: 2rem;
+	font-family: "Zilla Slab", serif;
+}
+
+footer ul li {
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	footer {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		-webkit-box-pack: space-evenly;
+		        justify-content: space-evenly;
+	}
+}
+
+footer h3 {
+	color: black;
+	font-family: "Zilla Slab", serif;
+	text-transform: uppercase;
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+footer .hours {
+	color: black;
+	text-decoration: none;
+	margin-bottom: .7rem;
+}
+
+footer .social {
+	margin-bottom: .7rem;
+}
+
+footer .social a {
+	color: black;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+

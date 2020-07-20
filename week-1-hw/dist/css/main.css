@@ -1,0 +1,416 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #09141e;
+}
+
+.header {
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	background-color: #FFF;
+	display: -webkit-box;
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav {
+	height: 4rem;
+	-webkit-box-align: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+.nav img {
+	margin-right: 80px;
+}
+
+@media screen and (max-width: 968px) {
+	.nav__menu {
+		position: fixed;
+		top: 4rem;
+		left: -100%;
+		padding: 1.5rem;
+		background-color: #9596A2;
+		width: 60%;
+		-webkit-transition: .33s;
+		transition: .33s;
+	}
+}
+
+.nav .name {
+	color: #111;
+	font-size: 1.5rem;
+	padding: .3rem;
+	text-decoration: none;
+}
+
+.nav .category {
+	margin-bottom: 2rem;
+}
+
+.show {
+	left: 0;
+}
+
+@media screen and (min-width: 968px) {
+	body {
+		margin: 0;
+	}
+	.nav {
+		height: 5rem;
+	}
+	.nav .navigation {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: justify;
+		        justify-content: space-between;
+	}
+	.nav .category {
+		margin-right: 4rem;
+		font-size: .5rem;
+		margin-bottom: 0;
+	}
+	.nav__toggle {
+		display: none;
+	}
+}
+
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 7vw;
+	width: 100vw;
+	padding: 15px;
+	text-align: center;
+	z-index: 2;
+	margin-top: 80px;
+	background: -webkit-linear-gradient(30deg, #df2020 10%, #df6020 10%, #df6020 25%, #dfbf20 25%, #dfbf20 40%, #20df40 40%, #20df40 55%, #209fdf 55%, #209fdf 70%, #6020df 70%, #6020df 85%, #df2020 85%);
+	background: linear-gradient(60deg, #df2020 10%, #df6020 10%, #df6020 25%, #dfbf20 25%, #dfbf20 40%, #20df40 40%, #20df40 55%, #209fdf 55%, #209fdf 70%, #6020df 70%, #6020df 85%, #df2020 85%);
+	color: #fff;
+	-webkit-animation: 10s BeProud linear infinite, 3s Always ease alternate infinite;
+	        animation: 10s BeProud linear infinite, 3s Always ease alternate infinite;
+}
+
+/* 2. Content ================================= */
+section.information {
+	width: 100%;
+	max-width: 70%;
+	margin: 100px auto;
+}
+
+section.information .info-section {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.6;
+	text-align: center;
+}
+
+section#portfolio.layout.layout-portfolio {
+	font-family: sans-serif;
+	width: 100%;
+	max-width: 80%;
+	margin: -20px auto;
+	padding: 50px 20px;
+	border: 3px dotted white;
+}
+
+section#portfolio.layout.layout-portfolio .container {
+	width: 95%;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+section#portfolio.layout.layout-portfolio .text-container {
+	height: 100%;
+	position: relative;
+	text-align: center;
+	color: #fff;
+}
+
+section#portfolio.layout.layout-portfolio .text-container h4 {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 1.5rem;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -70%);
+	    -ms-transform: translate(-50%, -70%);
+	        transform: translate(-50%, -70%);
+}
+
+section#portfolio.layout.layout-portfolio .text-container span {
+	font-family: 'Fredoka One', cursive;
+	font-size: 1.2rem;
+	margin-top: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+@media (min-width: 992px) {
+	section#portfolio.layout.layout-portfolio .text-container span {
+		display: none;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid {
+	padding: 25px 0;
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid a {
+	text-decoration: none;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+	width: 100%;
+	text-align: center;
+	margin: 15px 0;
+	position: relative;
+	padding: 0 15px;
+	height: 275px;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project .inner {
+	height: 100%;
+	position: relative;
+	border-radius: 50%;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project .inner .img-overlay {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project .inner .img-overlay {
+		background: rgba(0, 0, 0, 0.5);
+	}
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project .inner .img-overlay:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
+}
+
+@media (min-width: 768px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 50%;
+		height: 250px;
+	}
+}
+
+@media (min-width: 992px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 33.3%;
+		height: 200px;
+	}
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 25%;
+		height: 200px;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project:focus, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project:active {
+	outline: 0px;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project:hover .text-container span.project-subtitle {
+	display: block;
+	-webkit-animation: fade-in .8s ease-out;
+	        animation: fade-in .8s ease-out;
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		color: #EF8E20;
+		opacity: 0;
+	}
+	100% {
+		color: #fff;
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		color: #EF8E20;
+		opacity: 0;
+	}
+	100% {
+		color: #fff;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes BeProud {
+	100% {
+		background-position: 100vw 0px;
+	}
+}
+
+@keyframes BeProud {
+	100% {
+		background-position: 100vw 0px;
+	}
+}
+
+@-webkit-keyframes Always {
+	100% {
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
+	}
+}
+
+@keyframes Always {
+	100% {
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
+	}
+}
+
+footer {
+	background-color: #fff;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	line-height: 2rem;
+	font-family: "Zilla Slab", serif;
+}
+
+footer ul li {
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	footer {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		flex-direction: row;
+		-webkit-box-pack: space-evenly;
+		justify-content: space-evenly;
+	}
+}
+
+footer h3 {
+	color: black;
+	font-family: "Zilla Slab", serif;
+	text-transform: uppercase;
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+footer .hours {
+	color: black;
+	text-decoration: none;
+	margin-bottom: .7rem;
+}
+
+footer .social {
+	margin-bottom: .7rem;
+}
+
+footer .social a {
+	color: black;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

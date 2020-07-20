@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title> Accesibility </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dist/css/test.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <section class="form-overlay">
+            <form id="signup">
+                <a href="index.html"><img alt="Planned parenthood logo" src="dist/img/planlogo.png" width="100px"></a>
+                <h1>Testing Questionairre</h1>
+                <br>
+                <label for="signup-name">Enter your name here</label>
+                <input id="signup-name" type="text" name="signup-name" placeholder="Enter your Name">
+                <br>
+                <label for ="signup-email">Email address</label>
+                <input id="signup-email" type="email" name="signup-email" placeholder="lisa@gmail.com">
+                <br>
+                <label for="signup-number">Enter your number here</label>
+                <input id="signup-number" type="number" number="signup-number" placeholder="(123)-456-7890">
+
+                <br>
+                <ul>
+                    <li>
+                        <label for="signup-question">Have you ever been tested for STDs?</label>
+                        <br>
+                        <input type="radio" name="age" value="number">Yes in the past
+                        <br>
+                        <input type="radio" name="age" value="number">Yes in the past 6 months
+                        <br>
+                        <input type="radio" name="age" value="number">Never
+                        <br>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="signup-question2">Do STIs always have symptoms?</label>
+                        <br>
+                        <input type="radio" name="character" value="number">Yes
+                        <br>
+                        <input type="radio" name="character" value="number">No
+                        <br>
+                        <input type="radio" name="character" value="number">Don't Know
+                        <br>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="signup-question3">Have you had unprotected sexual acts in the previous 6 months or in between testing?</label>
+                        <br>
+                        <input type="radio" name="rating" value="number">Not really
+                        <br>
+                        <input type="radio" name="rating" value="number">Somewhat
+                        <br>
+                        <input type="radio" name="rating" value="number">Yes
+                        <br>
+                        <input type="radio" name="rating" value="number">Absolutely!
+                    </li>
+                    <br>
+                
+                <span><p >Have you ever been tested for the following?</p></span>
+                <span><p>*Please check all that apply*</p></span>
+                 <input type="checkbox" id="std1" name="hiv" value="Bike">
+                  <label for="hiv">HIV</label>
+                  <br>
+                  <input type="checkbox" id="std2" name="hsv12" value="Bike">
+                  <label for="hsv12">HSV 1-2</label>
+                  <br>
+                  <input type="checkbox" id="std3" name="chlamydia" value="Bike">
+                  <label for="chlamydia">Chlamydia</label>
+                  <br>
+                </ul>
+
+                <br>
+
+                    <li>
+                      <label for="gender">Choose Your Gender:</label><br>
+                      <select id="gender" name="gener">
+                        <option value="he">He</option>
+                        <option value="she">She</option>
+                        <option value="ze">Ze</option>
+                    </li>
+                <label for="signup-comment">Any additional comments for our team?</label>
+                <input class="comments" id="signup-comment" type="text" number="signup-comment" placeholder="Comments/Concerns">
+                <br>
+            </form>
+        </section>
+
+        
+
+        <script src="dist/js/main.js"></script>
+
+    </body>
+</html>
